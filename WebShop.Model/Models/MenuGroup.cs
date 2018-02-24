@@ -12,6 +12,7 @@ namespace WebShop.Model.Models
     public class MenuGroup
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
         [Required]

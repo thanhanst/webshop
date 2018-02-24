@@ -7,6 +7,7 @@ namespace WebShop.Model.Models
     public class Footer
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string ID { set; get; }
 
         [Required]
