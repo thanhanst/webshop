@@ -1,5 +1,6 @@
 ﻿using TeduShop.Data.Infrastructure;
 using TeduShop.Model.Models;
+using WebShop.Data.Infrastructure;
 
 namespace TeduShop.Data.Repositories
 {
