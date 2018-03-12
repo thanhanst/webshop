@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using TeduShop.Data.Repositories;
-using TeduShop.Model.Models;
+using WebShop.Data.Repositories;
+using WebShop.Model.Models;
 using WebShop.Data.Infrastructure;
 
-namespace TeduShop.Service
+namespace WebShop.Service
 {
     public interface IPostCategoryService
     {

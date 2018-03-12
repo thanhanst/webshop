@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using TeduShop.Data.Infrastructure;
-using TeduShop.Data.Repositories;
-using TeduShop.Model.Models;
-using System.Linq;
+﻿using System.Collections.Generic;
 using WebShop.Data.Infrastructure;
+using WebShop.Data.Repositories;
+using WebShop.Model.Models;
 
-namespace TeduShop.Service
+namespace WebShop.Service
 {
     public interface IPostService
     {
@@ -18,7 +15,7 @@ namespace TeduShop.Service
 
         IEnumerable<Post> GetAll();
 
-        IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow);        
+        IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow);
 
         IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow);
 
@@ -31,8 +28,8 @@ namespace TeduShop.Service
 
     public class PostService : IPostService
     {
-        IPostRepository _postRepository;
-        IUnitOfWork _unitOfWork;
+        private IPostRepository _postRepository;
+        private IUnitOfWork _unitOfWork;
 
         public PostService(IPostRepository postRepository, IUnitOfWork unitOfWork)
         {
@@ -43,7 +40,6 @@ namespace TeduShop.Service
         public void Add(Post post)
         {
             _postRepository.Add(post);
-            
         }
 
         public void Delete(int id)
@@ -65,8 +61,7 @@ namespace TeduShop.Service
         {
             //TODO: Select all post by tag
             //return _postRepository.GetAllByTag(tag, page, pageSize, out totalRow);
-            return _postRepository.GetAllByTag(tag,page, pageSize, out totalRow);
-
+            return _postRepository.GetAllByTag(tag, page, pageSize, out totalRow);
         }
 
         public IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow)

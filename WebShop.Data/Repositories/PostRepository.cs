@@ -1,16 +1,15 @@
-﻿using System.Collections.Generic;
-using TeduShop.Data.Infrastructure;
-using TeduShop.Model.Models;
-using WebShop.Data.Infrastructure;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using WebShop.Data.Infrastructure;
+using WebShop.Model.Models;
 
-namespace TeduShop.Data.Repositories
+namespace WebShop.Data.Repositories
 {
     public interface IPostRepository : IRepository<Post>
     {
-        IEnumerable<Post> GetAllByTag(string Tag, int pageIndex, int pageSize, out int totalRow)
-        {
-        }
+        IEnumerable<Post> GetAllByTag(string Tag, int pageIndex, int pageSize, out int totalRow);       
     }
 
     public class PostRepository : RepositoryBase<Post>, IPostRepository

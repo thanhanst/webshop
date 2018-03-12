@@ -1,8 +1,8 @@
-﻿using TeduShop.Data.Infrastructure;
-using TeduShop.Model.Models;
+﻿using WebShop.Data.Infrastructure;
+using WebShop.Model.Models;
 using WebShop.Data.Infrastructure;
 
-namespace TeduShop.Data.Repositories
+namespace WebShop.Data.Repositories
 {
     public interface IPostCategoryRepository : IRepository<PostCategory>
     {

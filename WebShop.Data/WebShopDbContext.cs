@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using TeduShop.Model.Models;
 using WebShop.Model.Models;
 
 namespace WebShop.Data

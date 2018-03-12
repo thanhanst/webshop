@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using WebShop.Model.Abstracts;
 
-namespace TeduShop.Model.Models
+namespace WebShop.Model.Models
 {
     [Table("Pages")]
     public class Page : Auditable
